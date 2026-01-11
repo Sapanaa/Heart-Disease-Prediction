@@ -44,11 +44,35 @@ Logistic Regression chosen due to:
 - Streamlit web application
 - Predict pipeline using saved model and preprocessor
 
+## Docker Deployment
+
+This project is fully containerized using Docker to ensure reproducibility and ease of deployment.
+
+### Prerequisites
+- Docker Desktop installed and running  
+  https://www.docker.com/products/docker-desktop/
+
+### Build the Docker Image
+```bash
+docker build -t heart-disease-app .
+
+
 ## How to Run
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 
+
+---
+
+
+
+```md
+> Note: Docker is used only for inference and deployment. Model training is performed separately before containerization.
+
+### Stop the Application
+
+Press `CTRL + C` in the terminal to stop the container.
 
 
 
