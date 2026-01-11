@@ -1,82 +1,90 @@
-# Heart-Disease-Prediction
+# ❤️ Heart Disease Prediction – End-to-End Machine Learning Project
 
-
-
-# Heart Disease Prediction – End-to-End ML Project
-
-## Problem Statement
-Early detection of heart disease using clinical and lifestyle features.
-
-## Dataset
-- 1000 patient records
-- Clinical + lifestyle indicators
-
-## Exploratory Data Analysis
-- Age and cholesterol are strongest predictors
-- Smoking is the only statistically significant categorical variable
-- Gender and family history show weak standalone effects
-
-## Statistical Testing
-- Chi-square tests for categorical features
-- Independent t-tests for numeric features
-- Results validated via logistic regression coefficients
-
-## Feature Engineering
-- Missing value handling
-- One-hot encoding
-- Standardization
-
-## Modeling
-Models tested:
-- Logistic Regression (Selected)
-- Decision Tree (Rejected – Overfitting)
-- Random Forest
-- SVM
-- KNN
-
-## Model Selection
-Logistic Regression chosen due to:
-- Strong generalization
-- Interpretability
-- Consistency with statistical analysis
-
-## Deployment
-- Streamlit web application
-- Predict pipeline using saved model and preprocessor
-
-## Docker Deployment
-
-This project is fully containerized using Docker to ensure reproducibility and ease of deployment.
-
-### Prerequisites
-- Docker Desktop installed and running  
-  https://www.docker.com/products/docker-desktop/
-
-```md
-> Note: Docker is used only for inference and deployment. Model training is performed separately before containerization.
-
-### Stop the Application
-
-Press `CTRL + C` in the terminal to stop the container.
-
-
-
-### Build the Docker Image
-```bash
-docker build -t heart-disease-app .
-
-
-## How to Run
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-
+## 📌 Overview
+This project implements an **end-to-end machine learning pipeline** to predict the likelihood of heart disease using clinical and lifestyle features.  
+It covers the complete ML lifecycle — from **EDA and statistical testing** to **model deployment using Streamlit and Docker**.
 
 ---
 
-python -m venv venv
+## 🎯 Problem Statement
+Early detection of heart disease is critical for preventive healthcare.  
+The goal of this project is to build a reliable and interpretable model that predicts heart disease risk based on patient health indicators.
 
+---
 
-venv\Scripts\activate
+## 📊 Dataset
+- **1000 patient records**
+- Combination of **clinical** and **lifestyle** features
+- Target variable: `Heart Disease (0 = No, 1 = Yes)`
 
+---
 
+## 🔍 Exploratory Data Analysis (EDA)
+Key findings:
+- **Age** and **cholesterol** are the strongest predictors
+- **Smoking** is the only statistically significant categorical variable
+- **Gender** and **family history** show weak standalone effects
+- Most features contribute meaningfully when combined
+
+---
+
+## 📐 Statistical Testing
+- **Chi-square tests** for categorical features
+- **Independent t-tests** for numerical features
+- Findings validated using **logistic regression coefficients**
+
+---
+
+## 🛠️ Feature Engineering
+- Missing value handling (median / most frequent)
+- One-hot encoding for categorical variables
+- Feature scaling using standardization
+- Pipeline-based preprocessing for reproducibility
+
+---
+
+## 🤖 Modeling
+Models evaluated:
+- Logistic Regression ✅ **(Selected)**
+- Decision Tree ❌ (Rejected – overfitting)
+- Random Forest
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+
+---
+
+## 🏆 Model Selection
+**Logistic Regression** was selected because it:
+- Generalizes well
+- Avoids overfitting
+- Is highly interpretable
+- Aligns with statistical and medical insights
+
+---
+
+## 🚀 Deployment
+- Interactive **Streamlit web application**
+- Modular **predict pipeline**
+- Uses saved **preprocessor** and **trained model**
+- Ready for real-time inference
+
+---
+
+## 🐳 Docker Deployment
+
+This project is fully containerized using Docker to ensure **reproducibility and easy deployment** across environments.
+
+> **Note:** Docker is used **only for inference and deployment**.  
+> Model training is performed separately before containerization.
+
+### 🔹 Prerequisites
+- Docker Desktop installed and running  
+  👉 https://www.docker.com/products/docker-desktop/
+
+---
+
+### 🔹 Build the Docker Image
+From the project root directory:
+
+```bash
+docker build -t heart-disease-app .
