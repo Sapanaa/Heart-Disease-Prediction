@@ -17,7 +17,7 @@ The goal of this project is to build a reliable and interpretable model that pre
 - Combination of **clinical** and **lifestyle** features
 - Target variable: `Heart Disease (0 = No, 1 = Yes)`
 
----
+
 
 ##  Exploratory Data Analysis (EDA)
 Key findings:
@@ -26,14 +26,14 @@ Key findings:
 - **Gender** and **family history** show weak standalone effects
 - Most features contribute meaningfully when combined
 
----
+
 
 ##  Statistical Testing
 - **Chi-square tests** for categorical features
 - **Independent t-tests** for numerical features
 - Findings validated using **logistic regression coefficients**
 
----
+
 
 ##  Feature Engineering
 - Missing value handling (median / most frequent)
@@ -41,9 +41,9 @@ Key findings:
 - Feature scaling using standardization
 - Pipeline-based preprocessing for reproducibility
 
----
 
-## 🤖 Modeling
+
+##  Modeling
 Models evaluated:
 - Logistic Regression 
 - Decision Tree 
@@ -51,7 +51,6 @@ Models evaluated:
 - Support Vector Machine (SVM)
 
 
----
 
 ##  Model Selection
 **Logistic Regression** was selected because it:
@@ -60,7 +59,7 @@ Models evaluated:
 - Is highly interpretable
 - Aligns with statistical and medical insights
 
----
+
 
 ##  Deployment
 - Interactive **Streamlit web application**
@@ -68,7 +67,7 @@ Models evaluated:
 - Uses saved **preprocessor** and **trained model**
 - Ready for real-time inference
 
----
+
 
 ##  Docker Deployment
 
@@ -89,22 +88,21 @@ From the project root directory:
 ```bash
 docker build -t heart-disease-app .
 
-```
+
 
 ##  Run Locally (Without Docker)
 
 Follow these steps to run the Heart Disease Prediction application locally on your machine.
 
----
 
 ###  Prerequisites
 - Python **3.9 or above**
 - Git installed
 
----
+
 
 ###  Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/Heart-Disease-Prediction.git
+git clone https://github.com/<Sapanaa>/Heart-Disease-Prediction.git
 cd Heart-Disease-Prediction
 ```
