@@ -168,32 +168,32 @@ This project is fully containerized using Docker to ensure **reproducibility and
 > **Note:** Docker is used **only for inference and deployment**.  
 > Model training is performed separately before containerization.
 
-### 🔹 Prerequisites
+###  Prerequisites
 - Docker Desktop installed and running  
   👉 https://www.docker.com/products/docker-desktop/
 
 ---
 
-### 🔹 Build the Docker Image
+###  Build the Docker Image
 From the project root directory:
 
 ```bash
 docker build -t heart-disease-app .
 ---
 
-## 🖥️ Run Locally (Without Docker)
+##  Run Locally (Without Docker)
 
 Follow these steps to run the Heart Disease Prediction application locally on your machine.
 
 ---
 
-### 🔹 Prerequisites
+###  Prerequisites
 - Python **3.9 or above**
 - Git installed
 
 ---
 
-### 🔹 Clone the Repository
+###  Clone the Repository
 ```bash
 git clone https://github.com/<your-username>/Heart-Disease-Prediction.git
 cd Heart-Disease-Prediction
