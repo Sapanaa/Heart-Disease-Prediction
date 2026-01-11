@@ -24,8 +24,8 @@ class ModelEvaluationConfig:
 
 
 class ModelEvaluation:
-    def __init__(self, model_evaluation_config: ModelEvaluationConfig):
-        self.model_evaluation_config = model_evaluation_config
+    def __init__(self):
+        self.model_evaluation_config = ModelEvaluationConfig()
 
     def evaluate_model(self, model_path, test_arr):
         try:
@@ -57,7 +57,7 @@ class ModelEvaluation:
 
             # Save report
             os.makedirs("artifacts", exist_ok=True)
-            with open(self.config.evaluation_report_path, "w") as f:
+            with open(self.model_evaluation_config.evaluation_report_path, "w") as f:
                 for k, v in metrics.items():
                     f.write(f"{k}: {v:.4f}\n")
                 f.write(f"\nModel Accepted: {is_accepted}\n")

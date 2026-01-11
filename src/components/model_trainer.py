@@ -102,7 +102,7 @@ class ModelTrainer:
             with open(self.model_trainer_config.trained_model_file_path, "wb") as f:
                 pickle.dump(best_model, f)
 
-            logging.info("Best model saved successfully")
+            logging.info(f"Best model {best_model}saved successfully")
 
             return self.model_trainer_config.trained_model_file_path
 
