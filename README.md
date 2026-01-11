@@ -52,6 +52,15 @@ This project is fully containerized using Docker to ensure reproducibility and e
 - Docker Desktop installed and running  
   https://www.docker.com/products/docker-desktop/
 
+```md
+> Note: Docker is used only for inference and deployment. Model training is performed separately before containerization.
+
+### Stop the Application
+
+Press `CTRL + C` in the terminal to stop the container.
+
+
+
 ### Build the Docker Image
 ```bash
 docker build -t heart-disease-app .
@@ -64,28 +73,6 @@ streamlit run app.py
 
 
 ---
-
-
-
-```md
-> Note: Docker is used only for inference and deployment. Model training is performed separately before containerization.
-
-### Stop the Application
-
-Press `CTRL + C` in the terminal to stop the container.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 python -m venv venv
 
